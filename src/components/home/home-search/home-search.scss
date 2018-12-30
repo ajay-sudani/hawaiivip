@@ -1,0 +1,79 @@
+.app-home-search {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    .text {
+        font-size: 14px;
+        color: #2f405d;
+        font-weight: bold;
+    }
+    .content {
+        margin-top: 10px;
+        .column {
+            border-radius: 5px;
+            background-color: #ffffff;
+            border: 1px solid #9da9bc;
+            padding: 10px;
+        }
+        .areas {
+            width: calc(40% - 15px);
+            margin-right: 15px;
+            display: inline-block;
+            select {
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                font-size: 16px;
+                color: #9da9bc;
+            }
+        }
+        .date {
+            width: calc(20% - 15px);
+            margin-right: 15px;
+            display: inline-block;
+            input {
+                width: 100%;
+                border: none;
+                font-size: 16px;
+                color: #9da9bc;
+            }
+        }
+        .guest {
+            width: calc(20% - 15px);
+            margin-right: 15px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: #ffffff;
+            border: 1px solid #9da9bc;
+            padding: 10px;
+            select {
+                width: 100%;
+                border: none;
+                background-color: transparent;
+                font-size: 16px;
+                color: #9da9bc;
+            }
+        }
+        .search {
+            width: 20%;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: #393337;
+            button {
+                background-color: transparent;
+                color: white;
+                border: none;
+                font-size: 16px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}
