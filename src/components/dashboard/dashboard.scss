@@ -1,0 +1,13 @@
+.app-dashboard {
+    .bg-area {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: fill;
+            height: 400px;
+        }
+    }
+    .list-container {
+        border-bottom: 1px solid #cccccc;
+    }
+}

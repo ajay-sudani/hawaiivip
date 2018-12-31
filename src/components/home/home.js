@@ -4,9 +4,9 @@ import './home.scss';
 import Footer from '../footer/footer';
 import HomeHeader from './home-header/home-header';
 import HomeSearch from './home-search/home-search';
-import AccommodationContainer from '../../container/accommodation/accommodation';
-import ActivitiesContainer from '../../container/activities/activities';
-import VipDifferenceContainer from '../../container/vip-difference/vip-difference';
+import AccommodationContainer from '../../container/home/accommodation/accommodation';
+import ActivitiesContainer from '../../container/home/activities/activities';
+import VipDifferenceContainer from '../../container/home/vip-difference/vip-difference';
 
 class Home extends Component {
     constructor(props) {
@@ -108,7 +108,7 @@ class Home extends Component {
                             <HomeSearch></HomeSearch>
                         </div>
                     </section>
-                    <section className="accommodation">
+                    <section>
                         <AccommodationContainer accommodation={accommodation}></AccommodationContainer>
                     </section>
                     <section className="sunshine">

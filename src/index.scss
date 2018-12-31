@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import './assets/fonts/Roboto.css';
+@import './assets/fonts/OpenSans.css';
+
 body {
     font-family: "Open Sans";
     margin: 0px;
@@ -116,9 +118,11 @@ section {
     outline: none;
     box-shadow: none;
 }
+
 * {
     transition: all 0.3s ease;
 }
+
 .clearfix:after {
     content: "";
     display: table;

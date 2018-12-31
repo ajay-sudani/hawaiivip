@@ -1,0 +1,105 @@
+.app-dashboard-search {
+    background-color: white;
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 20px;
+        .content {
+            margin-top: 10px;
+            .left {
+                width: 60%;
+                display: inline-block;
+                .column {
+                    border-radius: 5px;
+                    background-color: #ffffff;
+                    border: 1px solid #9da9bc;
+                    padding: 10px;
+                }
+                .areas {
+                    width: calc(40% - 15px);
+                    margin-right: 15px;
+                    display: inline-block;
+                    select {
+                        width: 100%;
+                        border: none;
+                        background-color: transparent;
+                        font-size: 16px;
+                        color: #9da9bc;
+                    }
+                }
+                .date,
+                .guest,
+                .price {
+                    width: calc(20% - 10px);
+                    margin-right: 15px;
+                    display: inline-block;
+                    border-radius: 5px;
+                    background-color: #ffffff;
+                    border: 1px solid #9da9bc;
+                    padding: 10px;
+                    select {
+                        width: 100%;
+                        border: none;
+                        background-color: transparent;
+                        font-size: 16px;
+                        color: #9da9bc;
+                    }
+                    input {
+                        width: 100%;
+                        border: none;
+                        font-size: 16px;
+                        color: #9da9bc;
+                    }
+                }
+                .price {
+                    margin-right: 0px;
+                }
+            }
+            .right {
+                width: 40%;
+                float: right;
+                text-align: right;
+                .accommodations {
+                    display: inline-block;
+                    margin-right: 15px;
+                    font-size: 18px;
+                    color: #393337;
+                    font-family: "Open Sans";
+                }
+                .switch {
+                    display: inline-block;
+                    margin-right: 15px;
+                    width: 60px;
+                    height: 30px;
+                    background-color: #efefef;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    .indicator {
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        background-color: white;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        border-radius: 50%;
+                        left: 5px;
+                        .arrow {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+                        }
+                    }
+                }
+                .activities {
+                    display: inline-block;
+                    font-size: 18px;
+                    color: #c7c7c7;
+                    font-family: "Open Sans";
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
