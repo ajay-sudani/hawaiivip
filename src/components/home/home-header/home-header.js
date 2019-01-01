@@ -6,7 +6,7 @@ class HomeHeader extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { loggedIn: false };
+        this.state = { loggedIn: false, menuActive: false };
     }
 
     componentDidMount() {
@@ -18,6 +18,14 @@ class HomeHeader extends Component {
         this.setState({
             loggedIn: isLoggedIn
         }, () => this.props.onLoginEvent(isLoggedIn));
+    }
+
+    menuToggle() {
+        let menuActive = this.state.menuActive;
+        console.log(menuActive);
+        this.setState({
+            menuActive: !menuActive
+        });
     }
 
     login() {
@@ -35,15 +43,20 @@ class HomeHeader extends Component {
     }
 
     render() {
-        const loggedIn = this.state.loggedIn;
+        const { loggedIn, menuActive } = this.state;
         return (
             <Aux>
                 <div className="app-home-header">
                     <div className="logo">
                         <img alt="no data found" src={require('../../../assets/images/logo_white.png')}></img>
                     </div>
-                    <div className="options">
-                        <ul>
+                    <div className="options" onClick={this.menuToggle.bind(this)}>
+                        <div className="menu-icon">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <ul className={menuActive ? 'active' : null}>
                             <li>ACCOMMODATIONS</li>
                             <li>ACTIVITIES</li>
                             {!loggedIn ? (<Aux>

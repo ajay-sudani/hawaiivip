@@ -96,7 +96,6 @@ class Home extends Component {
     }
 
     onLoginEvent(data) {
-        console.log(data);
         this.setState({
             loggedIn: data
         })
@@ -112,7 +111,7 @@ class Home extends Component {
                         <div className="container">
                             <HomeHeader onLoginEvent={this.onLoginEvent.bind(this)}></HomeHeader>
                             <div className="bg-area">
-                                <img alt="no data found" style={{ 'width': windowWidth, height: windowHeight }} src={require('../../assets/images/background_1.png')}></img>
+                                <img alt="no data found"  src={require('../../assets/images/background_1.png')}></img>
                             </div>
                             <HomeSearch></HomeSearch>
                         </div>
@@ -124,19 +123,19 @@ class Home extends Component {
                         <AccommodationContainer loggedIn={loggedIn} accommodation={accommodation}></AccommodationContainer>
                     </section>
                     <section className="sunshine">
-                        <img height={windowHeight} alt="no data found" width={windowWidth} src={require('../../assets/images/sunshine_makena_fairway_landing.png')}></img>
+                        <img alt="no data found"  src={require('../../assets/images/sunshine_makena_fairway_landing.png')}></img>
                     </section>
                     <section className="activities">
                         <ActivitiesContainer activities={activities}></ActivitiesContainer>
                     </section>
                     <section className="bg-cover">
-                        <img height={windowHeight} width={windowWidth} alt="no data found" src={require('../../assets/images/bg_cover_1.png')}></img>
+                        <img  alt="no data found" src={require('../../assets/images/bg_cover_1.png')}></img>
                     </section>
                     <section className="vip-difference">
                         <VipDifferenceContainer vipDifference={vipDifference}></VipDifferenceContainer>
                     </section>
                     <section className="napali_coast">
-                        <img height={windowHeight} width={windowWidth} alt="no data found" src={require('../../assets/images/napali_coast_1.png')}></img>
+                        <img height={windowHeight} alt="no data found" src={require('../../assets/images/napali_coast_1.png')}></img>
                         <div className="info">
                             <strong>
                                 “ Hawai’i is not a State of Mind,

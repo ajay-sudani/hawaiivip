@@ -144,7 +144,6 @@ class Dashboard extends Component {
     }
 
     onGuestToggle(data) {
-        console.log(data);
         this.setState({
             toggleGuest: data
         })

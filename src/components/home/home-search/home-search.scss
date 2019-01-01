@@ -8,40 +8,88 @@
     padding: 20px;
     background-color: white;
     border-radius: 5px;
+    @media screen and (max-width: 1024px) {
+        width: 80%;
+    }
     .text {
         font-size: 14px;
         color: #2f405d;
         font-weight: bold;
+        @media screen and (max-width: 1280px) {
+            font-size: 12px;
+        }
     }
     .content {
         margin-top: 10px;
+        line-height: 1;
         .column {
             border-radius: 5px;
             background-color: #ffffff;
             border: 1px solid #9da9bc;
             padding: 10px;
+            height: 44px;
+            @media screen and (max-width: 1280px) {
+                padding: 8px;
+                height: 40px;
+            }
         }
         .areas {
-            width: calc(40% - 15px);
+            width: calc(36% - 15px);
             margin-right: 15px;
             display: inline-block;
+            @media screen and (max-width: 1280px) {
+                margin-right: 10px;
+                width: calc(30% - 10px);
+            }
+            @media screen and (max-width: 767px) {
+                width: calc(50% - 8px);
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
             select {
                 width: 100%;
                 border: none;
                 background-color: transparent;
                 font-size: 16px;
                 color: #9da9bc;
+                @media screen and (max-width: 1400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                }
             }
         }
         .date {
-            width: calc(20% - 15px);
+            width: calc(22% - 15px);
             margin-right: 15px;
             display: inline-block;
+            @media screen and (max-width: 1280px) {
+                width: calc(25% - 10px);
+                margin-right: 10px;
+            }
+            @media screen and (max-width: 767px) {
+                width: calc(50% - 8px);
+                margin-right: 0px;
+                margin-bottom: 15px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
             input {
                 width: 100%;
                 border: none;
                 font-size: 16px;
                 color: #9da9bc;
+                @media screen and (max-width: 1400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                }
             }
         }
         .guest {
@@ -52,12 +100,31 @@
             background-color: #ffffff;
             border: 1px solid #9da9bc;
             padding: 10px;
+            @media screen and (max-width: 1280px) {
+                width: calc(25% - 10px);
+                margin-right: 10px;
+            }
+            @media screen and (max-width: 767px) {
+                width: calc(50% - 8px);
+                margin-right: 15px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                margin-right: 0px;
+                margin-bottom: 15px;
+            }
             select {
                 width: 100%;
                 border: none;
                 background-color: transparent;
                 font-size: 16px;
                 color: #9da9bc;
+                @media screen and (max-width: 1400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                }
             }
         }
         .search {
@@ -65,6 +132,13 @@
             display: inline-block;
             border-radius: 5px;
             background-color: #393337;
+            @media screen and (max-width: 767px) {
+                width: calc(50% - 8px);
+                margin-right: 0px;
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
             button {
                 background-color: transparent;
                 color: white;
@@ -72,6 +146,12 @@
                 font-size: 16px;
                 text-align: center;
                 width: 100%;
+                @media screen and (max-width: 1400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                }
             }
         }
     }

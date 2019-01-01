@@ -2,10 +2,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Aux from '../../../../hoc/Aux';
+import './activity-card.scss';
 
 const ActivityCardContainer = ({ item }) => (
     <Aux>
-        <div className="card" >
+        <div className="home-activity-card" >
             <div className="bg-image">
                 <img src={item.url} alt="no data found"></img>
             </div>
