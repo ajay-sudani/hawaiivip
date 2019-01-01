@@ -146,8 +146,10 @@
                     display: inline-block;
                     margin-right: 15px;
                     font-size: 18px;
-                    color: #393337;
-                    font-family: "Open Sans";
+                    color: #c7c7c7;
+                    &.active {
+                        color: #393337;
+                    }
                 }
                 .switch {
                     display: inline-block;
@@ -172,6 +174,17 @@
                             justify-content: center;
                             align-items: center;
                             height: 100%;
+                            img {
+                                transition: none;
+                            }
+                        }
+                        &.active {
+                            left: 35px;
+                            .arrow {
+                                img {
+                                    transform: rotate(180deg);
+                                }
+                            }
                         }
                     }
                 }
@@ -179,8 +192,10 @@
                     display: inline-block;
                     font-size: 18px;
                     color: #c7c7c7;
-                    font-family: "Open Sans";
                     font-weight: 300;
+                    &.active {
+                        color: #393337;
+                    }
                 }
             }
         }

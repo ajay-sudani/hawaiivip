@@ -6,7 +6,7 @@ class DashboardSearch extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { toggleGuest: false, guestNumber: 0 };
+        this.state = { toggleGuest: false, guestNumber: 0, toggleSwitch: false };
     }
 
     componentDidMount() {
@@ -47,10 +47,16 @@ class DashboardSearch extends Component {
 
     }
 
+    onToggleSwitch() {
+        const toggleSwitch = this.state.toggleSwitch;
+        this.setState({
+            toggleSwitch: !toggleSwitch
+        })
+    }
+
     render() {
 
-        const toggleGuest = this.state.toggleGuest;
-        const guestNumber = this.state.guestNumber;
+        const { toggleGuest, guestNumber, toggleSwitch } = this.state;
 
         return (
             <Aux>
@@ -92,15 +98,15 @@ class DashboardSearch extends Component {
                                 </div>
                             </div>
                             <div className="right">
-                                <p className="accommodations">Accommodations</p>
-                                <div className="switch">
-                                    <div className="indicator">
+                                <p className={toggleSwitch ? "accommodations" : "accommodations active"}>Accommodations</p>
+                                <div className="switch" onClick={this.onToggleSwitch.bind(this)}>
+                                    <div className={toggleSwitch ? "indicator active" : "indicator"}>
                                         <div className="arrow">
                                             <img alt="no data found" src={require('../../../assets/images/left_arrow_indicator.png')}></img>
                                         </div>
                                     </div>
                                 </div>
-                                <p className="activities">Activities</p>
+                                <p className={toggleSwitch ? "activities active" : "activities"}>Activities</p>
                             </div>
                         </div>
                     </div>

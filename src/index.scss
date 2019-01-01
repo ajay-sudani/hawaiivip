@@ -1,11 +1,6 @@
 @import './assets/fonts/Roboto.css';
 @import './assets/fonts/OpenSans.css';
 
-body {
-    font-family: "Open Sans";
-    margin: 0px;
-}
-
 html,
 body,
 div,
@@ -127,4 +122,9 @@ section {
     content: "";
     display: table;
     clear: both;
+}
+
+body {
+    font-family: "Open Sans";
+    margin: 0px;
 }
