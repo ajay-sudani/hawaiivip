@@ -121,6 +121,11 @@
             @media screen and (max-width: 1280px) {
                 font-size: 9px;
             }
+            @media screen and (max-width: 370px) {
+                span {
+                    display: block;
+                }
+            }
             .dot {
                 display: inline-block;
                 margin: 0px 5px;
@@ -128,6 +133,9 @@
                 height: 2px;
                 vertical-align: middle;
                 background-color: black;
+                @media screen and (max-width: 370px) {
+                    display: none;
+                }
             }
         }
         .night-price {

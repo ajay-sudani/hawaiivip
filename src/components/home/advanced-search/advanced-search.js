@@ -7,7 +7,7 @@ class AdvancedSearch extends Component {
             <div className="home-advanced-search">
                 <div className="column left">
                     <p className="text">What can we help you find, Amanda?</p>
-                    <div className="s-card">
+                    <div className="s-card accommodations">
                         <div className="image">
                             <img alt="no data found" src={require("../../../assets/images/activity_2.png")}></img>
                         </div>

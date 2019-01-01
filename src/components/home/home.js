@@ -27,6 +27,13 @@ class Home extends Component {
     setAccommodation() {
         this.setState({
             accommodation: [{
+                'url': require("../../assets/images/accommodation_3.png"),
+                'description': 'coral gardens estate',
+                'badrooms': 4,
+                'max_guests': 8,
+                'minimum_nights': 7,
+                'price': 750
+            }, {
                 'url': require("../../assets/images/accommodation_1.png"),
                 'description': 'coral gardens estate',
                 'badrooms': 4,
@@ -34,14 +41,7 @@ class Home extends Component {
                 'minimum_nights': 7,
                 'price': 750
             }, {
-                'url': require("../../assets/images/accommodation_2.png"),
-                'description': 'coral gardens estate',
-                'badrooms': 4,
-                'max_guests': 8,
-                'minimum_nights': 7,
-                'price': 750
-            }, {
-                'url': require("../../assets/images/accommodation_3.png"),
+                'url': require("../../assets/images/accommodation_1.png"),
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
