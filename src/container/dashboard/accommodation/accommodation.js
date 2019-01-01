@@ -5,7 +5,7 @@ import './accommodation.scss';
 import AccommodationCardContainer from './accommodation-card/accommodation-card'
 
 const AccommodationContainer = ({ accommodation }) => (
-    <div className="accommodation">
+    <div className="dashboard-accommodation">
         <div className="a-header">
             <strong>BIG ISLAND ACCOMMODATIONS</strong>
         </div>

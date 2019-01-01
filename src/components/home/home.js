@@ -4,6 +4,7 @@ import './home.scss';
 import Footer from '../footer/footer';
 import HomeHeader from './home-header/home-header';
 import HomeSearch from './home-search/home-search';
+import AdvancedSearch from './advanced-search/advanced-search';
 import AccommodationContainer from '../../container/home/accommodation/accommodation';
 import ActivitiesContainer from '../../container/home/activities/activities';
 import VipDifferenceContainer from '../../container/home/vip-difference/vip-difference';
@@ -11,7 +12,7 @@ import VipDifferenceContainer from '../../container/home/vip-difference/vip-diff
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = { windowWidth: 0, windowHeight: 0, accommodation: [], activities: [], vipDifference: [] };
+        this.state = { windowWidth: 0, windowHeight: 0, accommodation: [], activities: [], vipDifference: [], loggedIn: false };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
@@ -30,19 +31,22 @@ class Home extends Component {
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
-                'minimum_nights': 7
+                'minimum_nights': 7,
+                'price': 750
             }, {
                 'url': require("../../assets/images/accommodation_2.png"),
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
-                'minimum_nights': 7
+                'minimum_nights': 7,
+                'price': 750
             }, {
                 'url': require("../../assets/images/accommodation_3.png"),
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
-                'minimum_nights': 7
+                'minimum_nights': 7,
+                'price': 750
             }]
         });
     }
@@ -91,25 +95,33 @@ class Home extends Component {
         this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
     }
 
+    onLoginEvent(data) {
+        console.log(data);
+        this.setState({
+            loggedIn: data
+        })
+    }
+
     render() {
-        const { windowWidth, windowHeight } = this.state;
-        const { accommodation } = this.state;
-        const { activities } = this.state;
-        const { vipDifference } = this.state;
+        const { windowWidth, windowHeight, accommodation, activities, vipDifference, loggedIn } = this.state;
+
         return (
             <Aux>
                 <div className="app-home">
                     <section className="top">
                         <div className="container">
-                            <HomeHeader></HomeHeader>
+                            <HomeHeader onLoginEvent={this.onLoginEvent.bind(this)}></HomeHeader>
                             <div className="bg-area">
                                 <img alt="no data found" style={{ 'width': windowWidth, height: windowHeight }} src={require('../../assets/images/background_1.png')}></img>
                             </div>
                             <HomeSearch></HomeSearch>
                         </div>
                     </section>
-                    <section>
-                        <AccommodationContainer accommodation={accommodation}></AccommodationContainer>
+                    {loggedIn ? (<section className="advanced-search">
+                        <AdvancedSearch></AdvancedSearch>
+                    </section>) : null}
+                    <section className="accommodation">
+                        <AccommodationContainer loggedIn={loggedIn} accommodation={accommodation}></AccommodationContainer>
                     </section>
                     <section className="sunshine">
                         <img height={windowHeight} alt="no data found" width={windowWidth} src={require('../../assets/images/sunshine_makena_fairway_landing.png')}></img>

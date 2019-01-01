@@ -10,7 +10,7 @@ class Dashboard extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { accommodation: [] };
+        this.state = { accommodation: [], toggleGuest: false };
     }
 
     componentDidMount() {
@@ -143,9 +143,16 @@ class Dashboard extends Component {
         });
     }
 
+    onGuestToggle(data) {
+        console.log(data);
+        this.setState({
+            toggleGuest: data
+        })
+    }
+
     render() {
 
-        const { accommodation } = this.state;
+        const { accommodation, toggleGuest } = this.state;
 
         return (
             <Aux>
@@ -154,14 +161,16 @@ class Dashboard extends Component {
                         <DashboardHeader></DashboardHeader>
                     </section>
                     <section>
-                        <DashboardSearch></DashboardSearch>
+                        <DashboardSearch onGuestToggle={this.onGuestToggle.bind(this)}></DashboardSearch>
                     </section>
-                    <section>
+                    <section >
+                        <div className={toggleGuest ? 'overlay' : ''}></div>
                         <div className="bg-area">
                             <img alt="no data found" src={require('../../assets/images/napali_coast_2.png')}></img>
                         </div>
                     </section>
                     <section>
+                        <div className={toggleGuest ? 'overlay' : ''}></div>
                         <div className="list-container">
                             <AccommodationContainer accommodation={accommodation}></AccommodationContainer>
                         </div>

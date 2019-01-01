@@ -3,7 +3,55 @@ import Aux from '../../../hoc/Aux';
 import './dashboard-search.scss';
 
 class DashboardSearch extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { toggleGuest: false, guestNumber: 0 };
+    }
+
+    componentDidMount() {
+    }
+
+    onGuestClick() {
+        const guest = this.state.toggleGuest;
+        this.setState({
+            toggleGuest: !guest
+        }, () => {
+            this.props.onGuestToggle(this.state.toggleGuest);
+        });
+    }
+
+    onGuestNumberClick(event, prm) {
+        event.stopPropagation();
+        const guestNumber = this.state.guestNumber;
+        if (prm === 'plus') {
+            this.setState({
+                guestNumber: guestNumber + 1
+            });
+        } else {
+            if (guestNumber > 0) {
+                this.setState({
+                    guestNumber: guestNumber - 1
+                });
+            }
+        }
+    }
+
+    clearGuest() {
+        this.setState({
+            guestNumber: 0
+        });
+    }
+
+    applyGuest() {
+
+    }
+
     render() {
+
+        const toggleGuest = this.state.toggleGuest;
+        const guestNumber = this.state.guestNumber;
+
         return (
             <Aux>
                 <div className="app-dashboard-search">
@@ -20,12 +68,20 @@ class DashboardSearch extends Component {
                                 <div className="column date">
                                     <input type="date"></input>
                                 </div>
-                                <div className="column guest">
-                                    <select>
-                                        <option value="1">Guest 1</option>
-                                        <option value="2">Guest 2</option>
-                                        <option value="3">Guest 3</option>
-                                    </select>
+                                <div className={toggleGuest ? "column guest active" : "column guest"} onClick={this.onGuestClick.bind(this)}>
+                                    <p>{guestNumber} Guests</p>
+                                    <div className="guest-content">
+                                        <div className="top">
+                                            <span>Guests</span>
+                                            <div className="minus" onClick={(event) => { this.onGuestNumberClick(event, 'minus') }}>-</div>
+                                            <div className="number">{guestNumber}</div>
+                                            <div className="plus" onClick={(event) => { this.onGuestNumberClick(event, 'plus') }}>+</div>
+                                        </div>
+                                        <div className="bottom">
+                                            <span className="clear" onClick={this.clearGuest.bind(this)}>Clear</span>
+                                            <span className="apply" onClick={this.applyGuest.bind(this)}>Apply</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="column price">
                                     <select>

@@ -1,0 +1,78 @@
+.home-advanced-search {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #9da9bc;
+    .column {
+        display: inline-block;
+        &.left {
+            width: 60%;
+        }
+        .text {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #888484;
+            margin-bottom: 25px;
+        }
+        .s-card {
+            display: inline-block;
+            line-height: 80px;
+            margin-right: 20px;
+            .image {
+                display: inline-block;
+                img {
+                    width: 130px;
+                    height: 80px;
+                }
+            }
+            .info {
+                display: inline-block;
+                height: 80px;
+                position: relative;
+                left: -1px;
+                padding: 0px 20px;
+                border-radius: 2px;
+                background-color: #ffffff;
+                border: 1px solid #9da9bc;
+                span {
+                    font-size: 17px;
+                    letter-spacing: 3px;
+                    color: #000000;
+                    font-weight: 300;
+                }
+            }
+        }
+        &.right {
+            width: 40%;
+            .date-card {
+                display: inline-block;
+                padding: 15px;
+                border: 1px solid #9eaaba;
+                border-radius: 2px;
+                &.big-ieland {
+                    margin-right: 20px;
+                }
+                p {
+                    font-size: 11px;
+                    letter-spacing: 2px;
+                    color: #2f405d;
+                    font-weight: bold;
+                }
+                span {
+                    font-size: 16px;
+                    color: #9da9bc;
+                }
+                .arrow {
+                    display: inline-block;
+                    margin-left: 60px;
+                    position: relative;
+                    top: -7px;
+                    svg {
+                        fill: #acacac;
+                    }
+                }
+            }
+        }
+    }
+}

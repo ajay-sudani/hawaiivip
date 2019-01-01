@@ -7,7 +7,7 @@ class HomeSearch extends Component {
         return (
             <Aux>
                 <div className="app-home-search">
-                    <p className="text">EXPLORE vip Hawaiian lOCATIONS</p>
+                    <p className="text">EXPLORE VIP HAWAIIAN LOCATIONS</p>
                     <div className="content">
                         <div className="column areas">
                             <select>
