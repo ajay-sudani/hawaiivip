@@ -88,6 +88,10 @@
                         font-family: "Open Sans";
                         cursor: pointer;
                         outline: none;
+                        &:hover {
+                            background-color: #9E9E9E;
+                            color: white;
+                        }
                         @media screen and (max-width: 1280px) {
                             font-size: 12px;
                             width: 215px;
