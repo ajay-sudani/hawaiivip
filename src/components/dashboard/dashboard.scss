@@ -4,7 +4,13 @@
         img {
             width: 100%;
             object-fit: fill;
-            height: 400px;
+            height: 480px;
+            @media screen and (max-width: 1600px) {
+                height: 400px;
+            }
+            @media screen and (max-width: 1280px) {
+                height: 330px;
+            }
         }
     }
     .list-container {

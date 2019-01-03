@@ -5,38 +5,66 @@
         margin: 0 auto;
         padding: 20px;
         .content {
-            margin-top: 10px;
             .left {
                 width: 60%;
                 display: inline-block;
+                @media screen and (max-width: 1280px) {
+                    width: 70%;
+                }
+                @media screen and (max-width: 480px) {
+                    width: 100%;
+                }
                 .column {
                     border-radius: 5px;
                     background-color: #ffffff;
                     border: 1px solid #9da9bc;
-                    padding: 10px;
+                    padding: 0px 10px;
+                    height: 44px;
+                    line-height: 44px;
+                    @media screen and (max-width: 1280px) {
+                        height: 40px;
+                        line-height: 40px;
+                    }
                 }
                 .areas {
-                    width: calc(40% - 15px);
+                    width: calc(40% - 20px);
                     margin-right: 15px;
                     display: inline-block;
+                    margin-bottom: 15px;
+                    @media screen and (max-width: 1280px) {
+                        width: calc(30% - 20px);
+                    }
+                    @media screen and (max-width: 900px) {
+                        width: calc(50% - 10px);
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
                     select {
                         width: 100%;
                         border: none;
                         background-color: transparent;
                         font-size: 16px;
                         color: #9da9bc;
+                        @media screen and (max-width: 1600px) {
+                            font-size: 14px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            font-size: 12px;
+                            position: relative;
+                            top: -2px;
+                        }
                     }
                 }
                 .date,
                 .guest,
                 .price {
-                    width: calc(20% - 10px);
+                    width: calc(20% - 40px);
                     margin-right: 15px;
                     display: inline-block;
                     border-radius: 5px;
                     background-color: #ffffff;
                     border: 1px solid #9da9bc;
-                    padding: 10px;
                     cursor: pointer;
                     select {
                         width: 100%;
@@ -44,21 +72,86 @@
                         background-color: transparent;
                         font-size: 16px;
                         color: #9da9bc;
+                        @media screen and (max-width: 1600px) {
+                            font-size: 14px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            font-size: 12px;
+                            position: relative;
+                            top: -2px;
+                        }
                     }
                     input {
                         width: 100%;
                         border: none;
                         font-size: 16px;
                         color: #9da9bc;
+                        @media screen and (max-width: 1600px) {
+                            font-size: 14px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            font-size: 12px;
+                            position: relative;
+                            top: -3px;
+                        }
+                    }
+                }
+                .date {
+                    position: relative;
+                    width: 200px;
+                    @media screen and (max-width: 900px) {
+                        width: calc(50% - 10px);
+                        margin-bottom: 15px;
+                        margin-right: 0px;
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
+                    input[type="date"]:before {
+                        content: attr(placeholder) !important;
+                        color: #aaa;
+                        width: 100%;
+                    }
+                    input[type="date"]:focus:before,
+                    input[type="date"]:valid:before {
+                        content: "";
+                    }
+                    .date-icon {
+                        position: absolute;
+                        top: 50%;
+                        right: 10px;
+                        transform: translateY(-50%);
                     }
                 }
                 .price {
                     margin-right: 0px;
+                    @media screen and (max-width: 900px) {
+                        width: calc(50% - 10px);
+                        margin-right: 0px;
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                    }
                 }
                 .guest {
                     position: relative;
+                    @media screen and (max-width: 900px) {
+                        width: calc(50% - 10px);
+                        margin-right: 15px;
+                    }
+                    @media screen and (max-width: 480px) {
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
                     p {
                         color: #9da9bc;
+                        font-size: 16px;
+                        @media screen and (max-width: 1600px) {
+                            font-size: 14px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            font-size: 12px;
+                        }
                     }
                     &.active {
                         background-color: #3fb897;
@@ -74,7 +167,7 @@
                     .guest-content {
                         display: none;
                         position: absolute;
-                        width: calc(100% + 20px);
+                        width: 200px;
                         left: 0;
                         top: calc(100% + 3px);
                         background-color: white;
@@ -84,39 +177,43 @@
                         color: black;
                         z-index: 9;
                         .top {
+                            height: 25px;
+                            line-height: 25px;
                             span {
                                 font-size: 12px;
                                 color: #9da9bc;
                             }
-                            .minus {
-                                display: inline-block;
-                                width: 16px;
-                                height: 16px;
-                                line-height: 13px;
-                                text-align: center;
-                                border-radius: 50%;
-                                border: 1px solid #393337;
-                                margin-left: 25px;
-                                font-size: 12px;
-                                cursor: pointer;
-                            }
-                            .number {
-                                font-size: 16px;
-                                color: #393337;
-                                display: inline-block;
-                                margin: 0 10px;
-                                line-height: 1;
-                            }
-                            .plus {
-                                display: inline-block;
-                                width: 16px;
-                                height: 16px;
-                                line-height: 16px;
-                                text-align: center;
-                                border-radius: 50%;
-                                border: 1px solid #6bb497;
-                                font-size: 12px;
-                                cursor: pointer;
+                            .cal {
+                                float: right;
+                                .minus {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    line-height: 13px;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    border: 1px solid #393337;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                }
+                                .number {
+                                    font-size: 16px;
+                                    color: #393337;
+                                    display: inline-block;
+                                    margin: 0 10px;
+                                    line-height: 1;
+                                }
+                                .plus {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    line-height: 16px;
+                                    text-align: center;
+                                    border-radius: 50%;
+                                    border: 1px solid #6bb497;
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                }
                             }
                         }
                         .bottom {
@@ -142,13 +239,38 @@
                 width: 40%;
                 float: right;
                 text-align: right;
+                margin-top: 10px;
+                @media screen and (max-width: 1280px) {
+                    width: 30%;
+                }
+                @media screen and (max-width: 480px) {
+                    width: 100%;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+                    float: none;
+                    text-align: center;
+                }
                 .accommodations {
                     display: inline-block;
                     margin-right: 15px;
                     font-size: 18px;
                     color: #c7c7c7;
+                    vertical-align: middle;
+                    line-height: 1;
                     &.active {
                         color: #393337;
+                    }
+                    @media screen and (max-width: 1600px) {
+                        font-size: 15px;
+                    }
+                    @media screen and (max-width: 1280px) {
+                        font-size: 13px;
+                    }
+                    @media screen and (min-width: 481px) and (max-width: 900px) {
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                        margin-right: 0px;
                     }
                 }
                 .switch {
@@ -160,6 +282,14 @@
                     border-radius: 20px;
                     cursor: pointer;
                     position: relative;
+                    @media screen and (max-width: 1280px) {
+                        width: 50px;
+                        height: 25px;
+                    }
+                    @media screen and (min-width: 481px) and (max-width: 900px) {
+                        display: block;
+                        margin: 0 auto;
+                    }
                     .indicator {
                         position: absolute;
                         width: 20px;
@@ -169,6 +299,10 @@
                         transform: translateY(-50%);
                         border-radius: 50%;
                         left: 5px;
+                        @media screen and (max-width: 1280px) {
+                            width: 16px;
+                            height: 16px;
+                        }
                         .arrow {
                             display: flex;
                             justify-content: center;
@@ -176,10 +310,17 @@
                             height: 100%;
                             img {
                                 transition: none;
+                                height: auto;
+                                @media screen and (max-width: 1280px) {
+                                    width: 6px;
+                                }
                             }
                         }
                         &.active {
                             left: 35px;
+                            @media screen and (max-width: 1280px) {
+                                left: 30px;
+                            }
                             .arrow {
                                 img {
                                     transform: rotate(180deg);
@@ -193,8 +334,21 @@
                     font-size: 18px;
                     color: #c7c7c7;
                     font-weight: 300;
+                    vertical-align: middle;
+                    line-height: 1;
                     &.active {
                         color: #393337;
+                    }
+                    @media screen and (max-width: 1600px) {
+                        font-size: 15px;
+                    }
+                    @media screen and (max-width: 1280px) {
+                        font-size: 13px;
+                    }
+                    @media screen and (min-width: 481px) and (max-width: 900px) {
+                        display: block;
+                        margin-top: 15px;
+                        text-align: center;
                     }
                 }
             }

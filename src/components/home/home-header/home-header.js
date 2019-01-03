@@ -22,7 +22,6 @@ class HomeHeader extends Component {
 
     menuToggle() {
         let menuActive = this.state.menuActive;
-        console.log(menuActive);
         this.setState({
             menuActive: !menuActive
         });
@@ -51,10 +50,10 @@ class HomeHeader extends Component {
                         <img alt="no data found" src={require('../../../assets/images/logo_white.png')}></img>
                     </div>
                     <div className="options" onClick={this.menuToggle.bind(this)}>
-                        <div className="menu-icon">
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                        <div className={menuActive ? "menu-icon active" : "menu-icon"} >
+                            <p className="first"></p>
+                            <p className="second"></p>
+                            <p className="third"></p>
                         </div>
                         <ul className={menuActive ? 'active' : null}>
                             <li>ACCOMMODATIONS</li>

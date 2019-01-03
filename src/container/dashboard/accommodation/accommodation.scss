@@ -1,7 +1,7 @@
 .dashboard-accommodation {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 20px;
     .a-header {
         text-align: center;
         strong {
@@ -11,10 +11,21 @@
             font-family: "Open Sans";
             font-weight: 300;
             text-align: center;
+            @media screen and (max-width: 1600px) {
+                font-size: 30px;
+            }
+            @media screen and (max-width: 1280px) {
+                font-size: 24px;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 20px;
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 18px;
+            }
         }
     }
     .content {
         padding-top: 40px;
-        
     }
 }
