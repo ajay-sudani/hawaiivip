@@ -56,16 +56,16 @@ class HomeHeader extends Component {
                             <p className="third"></p>
                         </div>
                         <ul className={menuActive ? 'active' : null}>
-                            <li>ACCOMMODATIONS</li>
-                            <li>ACTIVITIES</li>
+                            <li><span>ACCOMMODATIONS</span></li>
+                            <li><span>ACTIVITIES</span></li>
                             {!loggedIn ? (<Aux>
-                                <li>ABOUT</li>
-                                <li>CONTACT</li>
+                                <li><span>ABOUT</span></li>
+                                <li><span>CONTACT</span></li>
                                 <li onClick={this.login.bind(this)}><button>Login</button></li>
                             </Aux>)
                                 : (<Aux>
-                                    <li>HELP</li>
-                                    <li className="favourite">FAVOURITES
+                                    <li><span>HELP</span></li>
+                                    <li className="favourite"><span>FAVOURITES</span>
                                         <div className="indicator">1</div>
                                     </li>
                                     <li>

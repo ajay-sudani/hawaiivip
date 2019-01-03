@@ -80,10 +80,15 @@
                 margin-right: 35px;
                 font-size: 12px;
                 letter-spacing: 3px;
-                color: white;
                 font-weight: bold;
                 text-align: center;
                 cursor: pointer;
+                span {
+                    color: white;
+                    &:hover {
+                        color: black;
+                    }
+                }
                 @media screen and (max-width: 1400px) {
                     font-size: 12px;
                     letter-spacing: 2px;
@@ -147,6 +152,8 @@
                 .profileInfo {
                     p {
                         display: inline-block;
+                        color: white;
+                        font-weight: bold;
                     }
                     .profile-logo {
                         margin-left: 10px;
