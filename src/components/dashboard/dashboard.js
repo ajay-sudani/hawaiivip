@@ -149,6 +149,9 @@ class Dashboard extends Component {
         })
     }
 
+    onLoginEvent(data) {
+    }
+
     render() {
 
         const { accommodation, toggleGuest } = this.state;
@@ -157,7 +160,7 @@ class Dashboard extends Component {
             <Aux>
                 <div className="app-dashboard">
                     <section>
-                        <DashboardHeader></DashboardHeader>
+                        <DashboardHeader onLoginEvent={this.onLoginEvent.bind(this)}></DashboardHeader>
                     </section>
                     <section>
                         <DashboardSearch onGuestToggle={this.onGuestToggle.bind(this)}></DashboardSearch>

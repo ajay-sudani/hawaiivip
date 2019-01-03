@@ -6,7 +6,14 @@ class DashboardHeader extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { menuActive: false };
+        this.state = { menuActive: false, loggedIn: false };
+    }
+
+    componentDidMount() {
+        let loggedIn = localStorage.getItem('token') ? true : false;
+        this.setState({
+            loggedIn: loggedIn
+        });
     }
 
     menuToggle() {
@@ -16,9 +23,23 @@ class DashboardHeader extends Component {
         });
     }
 
+    login() {
+        localStorage.setItem('token', new Date().valueOf().toString());
+        this.setState({
+            loggedIn: true
+        }, () => this.props.onLoginEvent(true));
+    }
+
+    logout() {
+        localStorage.removeItem('token');
+        this.setState({
+            loggedIn: false
+        }, () => this.props.onLoginEvent(false));
+    }
+
     render() {
 
-        const { menuActive } = this.state;
+        const { menuActive, loggedIn } = this.state;
 
         return (
             <Aux>
@@ -34,17 +55,33 @@ class DashboardHeader extends Component {
                                 <p className="third"></p>
                             </div>
                             <ul className={menuActive ? 'active' : null}>
-                                <li>HELP</li>
-                                <li className="favourite">
-                                    <span>FAVOURITES</span>
-                                    <p>2</p>
-                                </li>
-                                <li className="profileInfo">
-                                    <div>
-                                        <p>Welcome back, <strong>Amanda</strong></p>
-                                        <div className="profile-logo">A</div>
-                                    </div>
-                                </li>
+                                {
+                                    loggedIn ? (
+                                        <Aux>
+                                            <li>HELP</li>
+                                            <li className="favourite">
+                                                <span>FAVOURITES</span>
+                                                <p>2</p>
+                                            </li>
+                                            <li className="profileInfo" onClick={this.logout.bind(this)}>
+                                                <div>
+                                                    <p>Welcome back, <strong>Amanda</strong></p>
+                                                    <div className="profile-logo">A</div>
+                                                </div>
+                                            </li>
+                                        </Aux>
+                                    ) :
+                                        (
+                                            <Aux>
+                                                <li>ABOUT</li>
+                                                <li>CONTACT</li>
+                                                <li className="login-content">
+                                                    <button onClick={this.login.bind(this)}>LOGIN</button>
+                                                </li>
+                                            </Aux>
+                                        )
+                                }
+
                             </ul>
                         </div>
                     </div>

@@ -86,12 +86,13 @@
                         border: none;
                         font-size: 16px;
                         color: #9da9bc;
+                        position: relative;
                         @media screen and (max-width: 1600px) {
                             font-size: 14px;
+                            top: -2px
                         }
                         @media screen and (max-width: 1280px) {
                             font-size: 12px;
-                            position: relative;
                             top: -3px;
                         }
                     }
