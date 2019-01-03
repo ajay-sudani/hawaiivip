@@ -68,6 +68,25 @@
             margin-right: 15px;
             display: inline-block;
             position: relative;
+            .date-value {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: calc(100% - 35px);
+                left: 10px;
+                background-color: white;
+                font-size: 16px;
+                color: #9da9bc;
+                height: 24px;
+                line-height: 24px;
+                @media screen and (max-width: 1400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1280px) {
+                    font-size: 12px;
+                    left: 8px;
+                }
+            }
             input[type="date"]:before {
                 content: attr(placeholder) !important;
                 color: #aaa;
@@ -94,6 +113,9 @@
                 top: 50%;
                 right: 10px;
                 transform: translateY(-50%);
+                pointer-events: none;
+                z-index: 9999;
+                background: #fff;
             }
             input {
                 width: 100%;
