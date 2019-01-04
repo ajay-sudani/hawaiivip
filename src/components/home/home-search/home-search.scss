@@ -95,6 +95,7 @@
             input[type="date"]:focus:before,
             input[type="date"]:valid:before {
                 content: "";
+                font-family: "Open Sans";
             }
             @media screen and (max-width: 1280px) {
                 margin-right: 10px;

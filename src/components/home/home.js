@@ -27,21 +27,27 @@ class Home extends Component {
     setAccommodation() {
         this.setState({
             accommodation: [{
-                'url': require("../../assets/images/accommodation_3.png"),
+                'url': [require("../../assets/images/accommodation_3.png"),
+                require("../../assets/images/accommodation_2.png"),
+                require("../../assets/images/accommodation_1.png")],
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
                 'minimum_nights': 7,
                 'price': 750
             }, {
-                'url': require("../../assets/images/accommodation_1.png"),
+                'url': [require("../../assets/images/accommodation_1.png"),
+                require("../../assets/images/accommodation_2.png"),
+                require("../../assets/images/accommodation_3.png")],
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
                 'minimum_nights': 7,
                 'price': 750
             }, {
-                'url': require("../../assets/images/accommodation_1.png"),
+                'url': [require("../../assets/images/accommodation_1.png"),
+                require("../../assets/images/accommodation_2.png"),
+                require("../../assets/images/accommodation_3.png")],
                 'description': 'coral gardens estate',
                 'badrooms': 4,
                 'max_guests': 8,
@@ -111,7 +117,7 @@ class Home extends Component {
                         <div className="container">
                             <HomeHeader onLoginEvent={this.onLoginEvent.bind(this)}></HomeHeader>
                             <div className="bg-area">
-                                <img alt="no data found"  src={require('../../assets/images/background_1.png')}></img>
+                                <img alt="no data found" src={require('../../assets/images/background_1.png')}></img>
                             </div>
                             <HomeSearch></HomeSearch>
                         </div>
@@ -120,16 +126,16 @@ class Home extends Component {
                         <AdvancedSearch></AdvancedSearch>
                     </section>) : null}
                     <section className="accommodation">
-                        <AccommodationContainer loggedIn={loggedIn} accommodation={accommodation}></AccommodationContainer>
+                        <AccommodationContainer accommodation={accommodation}></AccommodationContainer>
                     </section>
                     <section className="sunshine">
-                        <img alt="no data found"  src={require('../../assets/images/sunshine_makena_fairway_landing.png')}></img>
+                        <img alt="no data found" src={require('../../assets/images/sunshine_makena_fairway_landing.png')}></img>
                     </section>
                     <section className="activities">
                         <ActivitiesContainer activities={activities}></ActivitiesContainer>
                     </section>
                     <section className="bg-cover">
-                        <img  alt="no data found" src={require('../../assets/images/bg_cover_1.png')}></img>
+                        <img alt="no data found" src={require('../../assets/images/bg_cover_1.png')}></img>
                     </section>
                     <section className="vip-difference">
                         <VipDifferenceContainer vipDifference={vipDifference}></VipDifferenceContainer>

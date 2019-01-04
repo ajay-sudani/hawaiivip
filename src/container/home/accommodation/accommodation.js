@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Aux from '../../../hoc/Aux';
 import AccommodationCardContainer from './accommodation-card/accommodation-card'
 
-const AccommodationContainer = ({ loggedIn, accommodation }) => (
+const AccommodationContainer = ({ accommodation }) => (
     <Aux>
         <div className="a-header">
             <div className="column">
@@ -17,7 +17,7 @@ const AccommodationContainer = ({ loggedIn, accommodation }) => (
         </div>
         <div className="content">
             {accommodation.map((item, index) => {
-                return <AccommodationCardContainer key={index} item={item} loggedIn={loggedIn}></AccommodationCardContainer>
+                return <AccommodationCardContainer key={index} item={item}></AccommodationCardContainer>
             })
             }
         </div>

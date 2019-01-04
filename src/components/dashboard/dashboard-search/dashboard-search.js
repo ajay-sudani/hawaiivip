@@ -81,7 +81,7 @@ class DashboardSearch extends Component {
                                     {
                                         dateValue ? (< p className="date-value">{dateValue}</p>) : null
                                     }
-                                    <input placeholder="check in date" type="date" onChange={e => this.handleInputChange(e)}></input>
+                                    <input placeholder="Check in date" type="date" onChange={e => this.handleInputChange(e)}></input>
                                     <div className="date-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18">
                                             <defs>
