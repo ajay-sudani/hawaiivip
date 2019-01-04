@@ -24,7 +24,13 @@
     .vip-difference {
         max-width: 1280px;
         margin: 0 auto;
-        padding: 120px 20px;
+        padding: 170px 20px;
+        @media screen and (max-width: 1600px) {
+            padding: 150px 20px;
+        }
+        @media screen and (max-width: 1440px) {
+            padding: 130px 20px;
+        }
         @media screen and (max-width: 1280px) {
             padding: 100px 20px;
         }
@@ -49,22 +55,31 @@
                     max-width: 100%;
                 }
                 h2 {
-                    font-size: 28px;
+                    font-size: 36px;
                     letter-spacing: 5px;
                     color: #000000;
                     font-weight: 300;
                     margin: 10px 0px;
                     text-transform: uppercase;
                     margin-bottom: 5px;
+                    @media screen and (max-width: 1600px) {
+                        font-size: 28px;
+                    }
+                    @media screen and (max-width: 1440px) {
+                        font-size: 26px;
+                    }
                     @media screen and (max-width: 1280px) {
                         font-size: 24px;
                         letter-spacing: 4px;
                     }
                 }
                 span {
-                    font-size: 12px;
+                    font-size: 16px;
                     letter-spacing: 1px;
                     color: #888484;
+                    @media screen and (max-width: 1600px) {
+                        font-size: 14px;
+                    }
                     @media screen and (max-width: 1280px) {
                         font-size: 11px;
                     }
@@ -106,12 +121,12 @@
             }
         }
         .content {
-            padding-top: 50px;
-            @media screen and (max-width: 1280px) {
-                padding-top: 40px;
-            }
-            @media screen and (max-width: 1024px) {
+            padding-top: 40px;
+            @media screen and (max-width: 1600px) {
                 padding-top: 30px;
+            }
+            @media screen and (max-width: 1280px) {
+                padding-top: 20px;
             }
         }
     }

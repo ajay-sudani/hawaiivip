@@ -1,9 +1,14 @@
 .home-advanced-search {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 20px;
-    padding-bottom: 70px;
-    border-bottom: 1px solid #9da9bc;
+    padding: 100px 20px 100px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    @media screen and (max-width: 1600px) {
+        padding: 70px 20px 70px 20px;
+    }
+    @media screen and (max-width: 1280px) {
+        padding: 50px 20px 50px 20px;
+    }
     .column {
         display: inline-block;
         &.left {
@@ -14,13 +19,27 @@
             }
         }
         .text {
-            font-size: 12px;
+            font-size: 30px;
             letter-spacing: 1px;
             color: #888484;
             margin-bottom: 25px;
+            @media screen and (max-width: 1600px) {
+                font-size: 25px;
+            }
+            @media screen and (max-width: 1280px) {
+                font-size: 22px;
+            }
             @media screen and (max-width: 1024px) {
                 margin-bottom: 10px;
+                font-size: 20px;
             }
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
+            @media screen and (max-width: 480px) {
+                font-size: 14px;
+            }
+            
         }
         .s-card {
             display: inline-block;
