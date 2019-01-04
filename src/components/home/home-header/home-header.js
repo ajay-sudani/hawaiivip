@@ -66,7 +66,7 @@ class HomeHeader extends Component {
                             {!loggedIn ? (<Aux>
                                 <li><span>ABOUT</span></li>
                                 <li><span>CONTACT</span></li>
-                                <li onClick={this.login.bind(this)}><button>Login</button></li>
+                                <li onClick={this.login.bind(this)}><button>LOGIN</button></li>
                             </Aux>)
                                 : (<Aux>
                                     <li><span>HELP</span></li>
