@@ -76,6 +76,11 @@ class DashboardSearch extends Component {
                                         <option value="2">Area 2</option>
                                         <option value="3">Area 3</option>
                                     </select>
+                                    <div className="down-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
+                                            <path d="M7.76,7.74l0.71,-0.71l-6.99,-6.99l-0.71,0.71zM16.46,0.75l-0.71,-0.71l-7.99,7.99l0.71,0.71z" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div className="column date">
                                     {
@@ -94,6 +99,11 @@ class DashboardSearch extends Component {
                                 </div>
                                 <div className={toggleGuest ? "column guest active" : "column guest"} onClick={this.onGuestClick.bind(this)}>
                                     <p>{guestNumber} Guests</p>
+                                    <div className="down-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
+                                            <path d="M7.76,7.74l0.71,-0.71l-6.99,-6.99l-0.71,0.71zM16.46,0.75l-0.71,-0.71l-7.99,7.99l0.71,0.71z" />
+                                        </svg>
+                                    </div>
                                     <div className="guest-content">
                                         <div className="top">
                                             <span>Guests</span>
@@ -116,6 +126,11 @@ class DashboardSearch extends Component {
                                         <option value="2">Price 2</option>
                                         <option value="3">Price 3</option>
                                     </select>
+                                    <div className="down-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
+                                            <path d="M7.76,7.74l0.71,-0.71l-6.99,-6.99l-0.71,0.71zM16.46,0.75l-0.71,-0.71l-7.99,7.99l0.71,0.71z" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                             <div className="right">
