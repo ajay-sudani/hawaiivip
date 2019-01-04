@@ -29,6 +29,11 @@ class HomeSearch extends Component {
                                 <option value="2">Area 2</option>
                                 <option value="3">Area 3</option>
                             </select>
+                            <div className="down-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
+                                    <path d="M7.76,7.74l0.71,-0.71l-6.99,-6.99l-0.71,0.71zM16.46,0.75l-0.71,-0.71l-7.99,7.99l0.71,0.71z" />
+                                </svg>
+                            </div>
                         </div>
                         <div className="column date">
                             {
@@ -51,6 +56,11 @@ class HomeSearch extends Component {
                                 <option value="2">Guest 2</option>
                                 <option value="3">Guest 3</option>
                             </select>
+                            <div className="down-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
+                                    <path d="M7.76,7.74l0.71,-0.71l-6.99,-6.99l-0.71,0.71zM16.46,0.75l-0.71,-0.71l-7.99,7.99l0.71,0.71z" />
+                                </svg>
+                            </div>
                         </div>
                         <div className="column search">
                             <button>SEARCH</button>

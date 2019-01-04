@@ -4,15 +4,20 @@
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
-    max-width: 1280px;
+    max-width: calc(100% - 60px);
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     z-index: 9;
+    @media screen and (max-width: 1400px) {
+        max-width: 1280px;
+        padding: 20px;
+    }
     .logo {
         display: inline-block;
         width: 335px;
         @media screen and (max-width: 1400px) {
             width: 240px;
+            height: 40px;
         }
         img {
             width: 100%;
@@ -22,8 +27,6 @@
     .options {
         width: calc(100% - 335px);
         display: inline-block;
-        line-height: 55px;
-        vertical-align: middle;
         @media screen and (max-width: 1400px) {
             width: calc(100% - 240px);
             line-height: 40px;
@@ -79,10 +82,12 @@
                 display: inline-block;
                 margin-right: 35px;
                 font-size: 16px;
-                letter-spacing: 3px;
-                font-weight: bold;
+                letter-spacing: 2px;
                 text-align: center;
                 cursor: pointer;
+                height: 55px;
+                line-height: 55px;
+                vertical-align: middle;
                 span {
                     color: white;
                     &:hover {
@@ -93,6 +98,8 @@
                     font-size: 12px;
                     letter-spacing: 2px;
                     margin-right: 25px;
+                    height: 40px;
+                    line-height: 40px;
                 }
                 @media screen and (max-width: 1280px) {
                     font-size: 11px;
@@ -150,13 +157,14 @@
                     }
                 }
                 .profileInfo {
+                    position: relative;
+                    margin-right: 55px;
                     p {
                         display: inline-block;
                         color: white;
                         font-weight: bold;
                     }
                     .profile-logo {
-                        margin-left: 10px;
                         width: 55px;
                         height: 55px;
                         border-radius: 50%;
@@ -167,6 +175,10 @@
                         display: inline-flex;
                         justify-content: center;
                         align-items: center;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -55px;
                         @media screen and (max-width: 1800px) {
                             font-size: 28px;
                             width: 53px;
@@ -176,21 +188,25 @@
                             font-size: 25px;
                             width: 47px;
                             height: 47px;
+                            right: -50px;
                         }
                         @media screen and (max-width: 1500px) {
                             font-size: 23px;
                             width: 44px;
                             height: 44px;
+                            right: -48px;
                         }
                         @media screen and (max-width: 1400px) {
                             font-size: 22px;
                             width: 41px;
                             height: 41px;
+                            right: -45px;
                         }
                         @media screen and (max-width: 1280px) {
                             font-size: 20px;
                             width: 38px;
                             height: 38px;
+                            right: -40px;
                         }
                     }
                 }
