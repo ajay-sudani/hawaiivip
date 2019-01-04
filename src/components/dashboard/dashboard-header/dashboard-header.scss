@@ -8,6 +8,7 @@
         .logo {
             display: inline-block;
             width: 330px;
+            cursor: pointer;
             @media screen and (max-width: 1400px) {
                 width: 270px;
             }

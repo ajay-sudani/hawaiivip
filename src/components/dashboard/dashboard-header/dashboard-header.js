@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Aux from '../../../hoc/Aux';
 import './dashboard-header.scss';
 
@@ -37,6 +38,10 @@ class DashboardHeader extends Component {
         }, () => this.props.onLoginEvent(false));
     }
 
+    goToDashboard() {
+        this.props.history.push('home');
+    }
+
     render() {
 
         const { menuActive, loggedIn } = this.state;
@@ -45,7 +50,7 @@ class DashboardHeader extends Component {
             <Aux>
                 <div className="dashboard-header">
                     <div className="container">
-                        <div className="logo">
+                        <div className="logo" onClick={this.goToDashboard.bind(this)}>
                             <img alt="no data found" src={require('../../../assets/images/logo_white.png')}></img>
                         </div>
                         <div className="options">
@@ -91,4 +96,4 @@ class DashboardHeader extends Component {
     };
 }
 
-export default DashboardHeader;
+export default withRouter(DashboardHeader);
