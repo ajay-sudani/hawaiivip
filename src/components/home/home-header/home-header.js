@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Aux from '../../../hoc/Aux';
 import './home-header.scss';
 
@@ -41,6 +42,10 @@ class HomeHeader extends Component {
         }, () => this.props.onLoginEvent(false));
     }
 
+    goToDashboard() {
+        this.props.history.push('dashboard');
+    }
+
     render() {
         const { loggedIn, menuActive } = this.state;
         return (
@@ -56,7 +61,7 @@ class HomeHeader extends Component {
                             <p className="third"></p>
                         </div>
                         <ul className={menuActive ? 'active' : null}>
-                            <li><span>ACCOMMODATIONS</span></li>
+                            <li onClick={this.goToDashboard.bind(this)}><span>ACCOMMODATIONS</span></li>
                             <li><span>ACTIVITIES</span></li>
                             {!loggedIn ? (<Aux>
                                 <li><span>ABOUT</span></li>
@@ -83,4 +88,4 @@ class HomeHeader extends Component {
     };
 }
 
-export default HomeHeader;
+export default withRouter(HomeHeader);
