@@ -30,7 +30,6 @@
                     width: calc(40% - 20px);
                     margin-right: 15px;
                     display: inline-block;
-                    margin-bottom: 15px;
                     @media screen and (max-width: 1280px) {
                         width: calc(30% - 20px);
                     }
@@ -146,6 +145,9 @@
                         z-index: 9999;
                         background: #fff;
                         height: 40px;
+                        @media screen and (max-width: 1280px) {
+                            height: 38px;
+                        }
                     }
                 }
                 .price {
