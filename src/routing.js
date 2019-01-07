@@ -3,7 +3,7 @@ import Aux from './hoc/Aux';
 import { BrowserRouter, Route, Redirect, HashRouter } from 'react-router-dom'
 import Home from './components/home/home';
 import Dashboard from './components/dashboard/dashboard';
-const url = process.env.NODE_ENV === 'production' ? '/hawaiivip' : '';
+const url = process.env.NODE_ENV === 'production' ? '' : '';
 
 class AppRouting extends Component {
     render() {
