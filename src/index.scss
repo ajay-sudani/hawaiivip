@@ -1,7 +1,5 @@
 @import './assets/fonts/Roboto.css';
 @import './assets/fonts/OpenSans.css';
-@import './assets/fonts/Montserrat.css';
-
 html,
 body,
 div,
@@ -117,6 +115,13 @@ section {
 
 * {
     transition: all 0.3s ease;
+}
+
+@font-face {
+    font-family: 'MonotypeCorsiva';
+    src: url('assets/fonts/MonotypeCorsiva.eot?#iefix') format('embedded-opentype'), url('assets/fonts/MonotypeCorsiva.woff') format('woff'), url('assets/fonts/MonotypeCorsiva.ttf') format('truetype'), url('assets/fonts/MonotypeCorsiva.svg#MonotypeCorsiva') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .clearfix:after {

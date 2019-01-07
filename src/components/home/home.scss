@@ -211,9 +211,11 @@
                 font-size: 60px;
                 letter-spacing: -1px;
                 color: #ffffff;
-                font-family: 'Montserrat', sans-serif;
                 display: block;
                 margin-bottom: 10px;
+                font-family: 'MonotypeCorsiva';
+                font-weight: normal;
+                font-style: italic;
                 @media screen and (min-width: 768px) and (max-width: 1024px) {
                     font-size: 48px;
                 }
