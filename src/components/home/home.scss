@@ -140,10 +140,11 @@
     .sunshine {
         overflow: hidden;
         img {
-            height: 650px;
+            height: 100%;
             width: 100%;
-            @media screen and (max-width: 1400px) {
-                height: 540px;
+            @media screen and (min-width: 1024px) {
+                object-fit: cover;
+                object-position: top;
             }
             @media screen and (max-width: 1024px) {
                 height: 500px;
@@ -153,10 +154,11 @@
     .bg-cover {
         overflow: hidden;
         img {
-            height: 650px;
             width: 100%;
-            @media screen and (max-width: 1400px) {
-                height: 540px;
+            height: 100%;
+            @media screen and (min-width: 1024px) {
+                object-fit: cover;
+                object-position: top;
             }
             @media screen and (max-width: 1024px) {
                 height: 500px;
