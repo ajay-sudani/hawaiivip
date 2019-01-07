@@ -2,7 +2,6 @@
   "name": "hawaiivip",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/hawaiivip",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
