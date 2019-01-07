@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/hawaiivip/static/media/napali_coast_2.47c8de82.png"
   },
   {
-    "revision": "cc51f02a51c3c1b08ec9e452050af3d7",
+    "revision": "cd9cfa691ae3f76950cce4b2bddc08f5",
     "url": "/hawaiivip/index.html"
   }
 ];
