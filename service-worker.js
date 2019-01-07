@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/hawaiivip/precache-manifest.06fc2a531ac8028f802652c5b1853eaa.js"
+  "/hawaiivip/precache-manifest.73d5d78ac87788529724de893c8fd7a2.js"
 );
 
 workbox.clientsClaim();
