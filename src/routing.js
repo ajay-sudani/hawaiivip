@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Aux from './hoc/Aux';
-import { BrowserRouter, Route, Redirect, HashRouter } from 'react-router-dom'
+import { Route, Redirect, HashRouter } from 'react-router-dom'
 import Home from './components/home/home';
 import Dashboard from './components/dashboard/dashboard';
-const url = process.env.NODE_ENV === 'production' ? '' : '';
+const url = process.env.NODE_ENV === 'production' ? '/hawaiivip' : '';
 
 class AppRouting extends Component {
     render() {
