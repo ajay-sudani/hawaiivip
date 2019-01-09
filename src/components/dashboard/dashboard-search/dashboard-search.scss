@@ -42,17 +42,17 @@
                     }
                 }
                 .areas {
-                    width: calc(40% - 20px);
+                    width: calc(40% - 60px);
                     margin-right: 15px;
                     display: inline-block;
                     @media screen and (max-width: 1280px) {
                         width: calc(30% - 20px);
                     }
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: 1024px) {
                         width: calc(50% - 10px);
                         margin-bottom: 15px;
                     }
-                    @media screen and (max-width: 480px) {
+                    @media screen and (max-width: 700px) {
                         width: 100%;
                     }
                     select {
@@ -113,10 +113,32 @@
                     }
                 }
                 .date {
-                    width: 200px;
+                    width: 240px;
                     margin-right: 15px;
                     display: inline-block;
                     position: relative;
+                    .DateRangePickerInput {
+                        border: none;
+                        line-height: 40px;
+                        @media screen and (max-width: 1280px) {
+                            line-height: 36px;
+                        }
+                        .DateInput {
+                            width: 80px;
+                            input {
+                                font-family: "Open Sans";
+                                color: #9da9bc;
+                                line-height: 1;
+                                padding: 0;
+                            }
+                        }
+                        .DateRangePickerInput_arrow {
+                            margin-right: 10px;
+                        }
+                    }
+                    .DayPicker_transitionContainer {
+                        height: 400px !important;
+                    }
                     .date-value {
                         position: absolute;
                         top: 50%;
@@ -134,12 +156,12 @@
                             left: 8px;
                         }
                     }
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: 1024px) {
                         width: calc(50% - 10px);
                         margin-bottom: 15px;
                         margin-right: 0px;
                     }
-                    @media screen and (max-width: 480px) {
+                    @media screen and (max-width: 700px) {
                         width: 100%;
                     }
                     input[type="date"]:before {
@@ -168,11 +190,11 @@
                 }
                 .price {
                     margin-right: 0px;
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: 1024px) {
                         width: calc(50% - 10px);
                         margin-right: 0px;
                     }
-                    @media screen and (max-width: 480px) {
+                    @media screen and (max-width: 700px) {
                         width: 100%;
                     }
                 }
@@ -181,11 +203,11 @@
                     .down-arrow {
                         background-color: transparent;
                     }
-                    @media screen and (max-width: 900px) {
+                    @media screen and (max-width: 1024px) {
                         width: calc(50% - 10px);
                         margin-right: 15px;
                     }
-                    @media screen and (max-width: 480px) {
+                    @media screen and (max-width: 700px) {
                         width: 100%;
                         margin-bottom: 15px;
                     }
@@ -211,7 +233,7 @@
                         }
                         .down-arrow {
                             svg {
-                                fill : white;
+                                fill: white;
                             }
                         }
                     }

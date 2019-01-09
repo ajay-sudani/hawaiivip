@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Aux from '../../../hoc/Aux';
 import './dashboard-search.scss';
+import { DateRangePicker } from 'react-dates';
 
 class DashboardSearch extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { toggleGuest: false, guestNumber: 0, toggleSwitch: false, dateValue: '' };
+        this.state = { toggleGuest: false, guestNumber: 0, toggleSwitch: false, startDate: null, endDate: null };
     }
 
     componentDidMount() {
@@ -54,15 +55,9 @@ class DashboardSearch extends Component {
         })
     }
 
-    handleInputChange(event) {
-        this.setState({
-            dateValue: event.target.value
-        });
-    }
-
     render() {
 
-        const { toggleGuest, guestNumber, toggleSwitch, dateValue } = this.state;
+        const { toggleGuest, guestNumber, toggleSwitch } = this.state;
 
         return (
             <Aux>
@@ -83,10 +78,15 @@ class DashboardSearch extends Component {
                                     </div>
                                 </div>
                                 <div className="column date">
-                                    {
-                                        dateValue ? (< p className="date-value">{dateValue}</p>) : null
-                                    }
-                                    <input placeholder="Check in date" type="date" onChange={e => this.handleInputChange(e)}></input>
+                                    <DateRangePicker
+                                        startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                                        startDateId="dashboard_start_date" // PropTypes.string.isRequired,
+                                        endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                                        endDateId="dashboard_end_date" // PropTypes.string.isRequired,
+                                        onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                                        focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                                        onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                                    />
                                     <div className="date-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18">
                                             <defs>

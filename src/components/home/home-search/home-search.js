@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Aux from '../../../hoc/Aux';
 import './home-search.scss';
+import { DateRangePicker } from 'react-dates';
 
 class HomeSearch extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { dateValue: '' };
+        this.state = { startDate: null, endDate: null };
     }
 
     handleInputChange(event) {
@@ -16,7 +17,6 @@ class HomeSearch extends Component {
     }
 
     render() {
-        const { dateValue } = this.state;
 
         return (
             <Aux>
@@ -36,10 +36,15 @@ class HomeSearch extends Component {
                             </div>
                         </div>
                         <div className="column date">
-                            {
-                                dateValue ? (< p className="date-value">{dateValue}</p>) : null
-                            }
-                            <input placeholder="Check in date" type="date" onChange={e => this.handleInputChange(e)}></input>
+                            <DateRangePicker
+                                startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                                startDateId="dashboard_start_date" // PropTypes.string.isRequired,
+                                endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                                endDateId="dashboard_end_date" // PropTypes.string.isRequired,
+                                onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                                focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                            />
                             <div className="date-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18">
                                     <defs>
