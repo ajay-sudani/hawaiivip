@@ -70,7 +70,7 @@ class HomeHeader extends Component {
                             </Aux>)
                                 : (<Aux>
                                     <li><span>HELP</span></li>
-                                    <li className="favourite"><span>FAVOURITES</span>
+                                    <li className="favourite"><span>FAVORITES</span>
                                         <div className="indicator">1</div>
                                     </li>
                                     <li>
