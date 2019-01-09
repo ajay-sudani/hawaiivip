@@ -65,7 +65,7 @@ class DashboardHeader extends Component {
                                         <Aux>
                                             <li>HELP</li>
                                             <li className="favourite">
-                                                <span>FAVOURITES</span>
+                                                <span>FAVORITES</span>
                                                 <p>2</p>
                                             </li>
                                             <li className="profileInfo" onClick={this.logout.bind(this)}>

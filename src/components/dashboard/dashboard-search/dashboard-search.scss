@@ -6,8 +6,11 @@
         padding: 20px;
         .content {
             .left {
-                width: 60%;
+                width: 70%;
                 display: inline-block;
+                @media screen and (max-width: 1600px) {
+                    width: 60%;
+                }
                 @media screen and (max-width: 1280px) {
                     width: 70%;
                 }
@@ -260,32 +263,48 @@
                                 float: right;
                                 .minus {
                                     display: inline-block;
-                                    width: 16px;
-                                    height: 16px;
-                                    line-height: 13px;
+                                    width: 20px;
+                                    height: 20px;
+                                    line-height: 16px;
                                     text-align: center;
                                     border-radius: 50%;
                                     border: 1px solid #393337;
-                                    font-size: 12px;
+                                    font-size: 21px;
                                     cursor: pointer;
+                                    -webkit-user-select: none;
+                                    /* Chrome/Safari */
+                                    -moz-user-select: none;
+                                    /* Firefox */
+                                    -ms-user-select: none;
+                                    /* IE10+ */
+                                    -o-user-select: none;
+                                    user-select: none;
                                 }
                                 .number {
                                     font-size: 16px;
                                     color: #393337;
                                     display: inline-block;
                                     margin: 0 10px;
-                                    line-height: 1;
+                                    line-height: 1.25;
                                 }
                                 .plus {
                                     display: inline-block;
-                                    width: 16px;
-                                    height: 16px;
-                                    line-height: 16px;
+                                    width: 20px;
+                                    height: 20px;
+                                    line-height: 18px;
                                     text-align: center;
                                     border-radius: 50%;
                                     border: 1px solid #6bb497;
-                                    font-size: 12px;
+                                    font-size: 16px;
                                     cursor: pointer;
+                                    -webkit-user-select: none;
+                                    /* Chrome/Safari */
+                                    -moz-user-select: none;
+                                    /* Firefox */
+                                    -ms-user-select: none;
+                                    /* IE10+ */
+                                    -o-user-select: none;
+                                    user-select: none;
                                 }
                             }
                         }
@@ -309,10 +328,13 @@
                 }
             }
             .right {
-                width: 40%;
+                width: 30%;
                 float: right;
                 text-align: right;
                 margin-top: 10px;
+                @media screen and (max-width: 1600px) {
+                    width: 40%;
+                }
                 @media screen and (max-width: 1280px) {
                     width: 30%;
                 }
