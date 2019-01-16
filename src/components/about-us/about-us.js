@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/Aux';
 import './about-us.scss';
 import Footer from '../footer/footer';
-import AboutUsHeader from './about-us-header/about-us-header';
+import AppHeader from '../app-header/app-header';
 
 class AboutUs extends Component {
     constructor(props) {
@@ -38,7 +38,7 @@ class AboutUs extends Component {
             <Aux>
                 <div className="about-us">
                     <section className="header-section">
-                        <AboutUsHeader onLoginEvent={this.onLoginEvent.bind(this)}></AboutUsHeader>
+                        <AppHeader onLoginEvent={this.onLoginEvent.bind(this)}></AppHeader>
                     </section>
                     <section className="background-cover">
                         <div className="image-content">

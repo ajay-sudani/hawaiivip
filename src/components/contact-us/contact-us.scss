@@ -1,0 +1,451 @@
+.contact-us {
+    .background-cover {
+        .image-content {
+            width: 100%;
+            height: 550px;
+            @media screen and (max-width: 1600px) {
+                height: 500px;
+            }
+            @media screen and (max-width: 1400px) {
+                height: 400px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .contact-us-info {
+        padding: 100px 20px;
+        max-width: 950px;
+        margin: 0 auto;
+        text-align: center;
+        @media screen and (max-width: 1400px) {
+            padding: 80px 20px;
+        }
+        @media screen and (max-width: 1024px) {
+            padding: 60px 40px;
+        }
+        @media screen and (max-width: 768px) {
+            padding: 40px 40px;
+        }
+        @media screen and (max-width: 480px) {
+            padding: 40px 15px;
+        }
+        .contact-us-label {
+            margin-bottom: 90px;
+            @media screen and (max-width: 1600px) {
+                margin-bottom: 70px;
+            }
+            @media screen and (max-width: 1400px) {
+                margin-bottom: 60px;
+            }
+            @media screen and (max-width: 1024px) {
+                margin-bottom: 40px;
+            }
+            @media screen and (max-width: 768px) {
+                margin-bottom: 30px;
+            }
+            label {
+                font-size: 36px;
+                letter-spacing: 6px;
+                color: #000000;
+                font-weight: 300;
+                @media screen and (max-width: 1600px) {
+                    font-size: 30px;
+                    letter-spacing: 5px;
+                }
+                @media screen and (max-width: 1400px) {
+                    font-size: 26px;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+        .more-text {
+            text-align: center;
+            padding: 0px 25px;
+            @media screen and (max-width: 480px) {
+                padding: 0 20px;
+            }
+            p {
+                font-size: 16px;
+                letter-spacing: 1px;
+                color: #888484;
+                font-weight: 400;
+                &.number {
+                    color: #6dbba1;
+                    font-size: 20px;
+                }
+                &.assistance-text {
+                    margin-bottom: 30px;
+                    @media screen and (max-width: 1400px) {
+                        margin-bottom: 20px;
+                    }
+                }
+                &.more-information-text {
+                    margin-top: 60px;
+                    @media screen and (max-width: 1400px) {
+                        margin-bottom: 40px;
+                    }
+                    @media screen and (max-width: 1024px) {
+                        margin-bottom: 30px;
+                    }
+                }
+                @media screen and (max-width: 1600px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1400px) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .form-content {
+            text-align: left;
+            margin-top: 130px;
+            @media screen and (max-width: 1600px) {
+                margin-top: 100px;
+            }
+            @media screen and (max-width: 1400px) {
+                margin-top: 80px;
+            }
+            @media screen and (max-width: 1024px) {
+                margin-top: 60px;
+            }
+            @media screen and (max-width: 767px) {
+                margin-top: 50px;
+            }
+            @media screen and (max-width: 480px) {
+                margin-top: 40px;
+            }
+            .row {
+                margin-bottom: 35px;
+                @media screen and (max-width: 1400px) {
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 1024px) {
+                    margin-bottom: 25px;
+                }
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 20px;
+                }
+                label {
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    color: #2f405d;
+                    font-weight: 600;
+                    margin-left: 15px;
+                    @media screen and (max-width: 1024px) {
+                        font-size: 10px;
+                    }
+                }
+                .input-content {
+                    margin-top: 8px;
+                    input {
+                        font-size: 16px;
+                        color: #9da9bc;
+                        font-weight: 400;
+                        border-radius: 5px;
+                        background-color: #ffffff;
+                        border: 1px solid #9da9bc;
+                        padding: 15px;
+                        @media screen and (max-width: 1600px) {
+                            font-size: 14px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                &.name {
+                    .input-content {
+                        input {
+                            width: calc(50% - 10px);
+                            display: inline-block;
+                            &:first-child {
+                                margin-right: 20px;
+                            }
+                            @media screen and (max-width: 480px) {
+                                width: 100%;
+                                &:first-child {
+                                    margin-right: 0px;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.email {
+                    .input-content {
+                        input {
+                            width: 100%;
+                            display: inline-block;
+                        }
+                    }
+                }
+                &.phone {
+                    .input-content {
+                        input {
+                            width: calc(50% - 10px);
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &.selection,
+                &.check-in-out {
+                    .column {
+                        position: relative;
+                        width: calc(25% - 30px);
+                        display: inline-block;
+                        &:first-child {
+                            margin-right: 50px;
+                        }
+                        @media screen and (max-width: 1280px) {
+                            width: calc(25% - 12px);
+                            &:first-child {
+                                margin-right: 15px;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            &:first-child {
+                                margin-right: 0px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                        .select-area {
+                            border-radius: 5px;
+                            background-color: #ffffff;
+                            border: 1px solid #9da9bc;
+                            padding: 0px 10px;
+                            height: 50px;
+                            line-height: 50px;
+                            position: relative;
+                            margin-top: 8px;
+                            @media screen and (max-width: 1280px) {
+                                height: 40px;
+                                line-height: 40px;
+                            }
+                            select {
+                                width: 100%;
+                                border: none;
+                                background-color: transparent;
+                                font-size: 16px;
+                                color: #9da9bc;
+                                height: 100%;
+                                @media screen and (max-width: 1600px) {
+                                    font-size: 14px;
+                                }
+                                @media screen and (max-width: 1280px) {
+                                    font-size: 12px;
+                                    position: relative;
+                                    top: -2px;
+                                }
+                            }
+                            .down-arrow {
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: 10px;
+                                background-color: white;
+                                width: 20px;
+                                height: 100%;
+                                pointer-events: none;
+                                cursor: pointer;
+                                svg {
+                                    fill: #acacac;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.check-in-out {
+                    .column {
+                        width: calc(50% - 10px);
+                        position: relative;
+                        &:first-child {
+                            margin-right: 0px;
+                        }
+                        .date {
+                            width: 100%;
+                            border-radius: 5px;
+                            background-color: #ffffff;
+                            border: 1px solid #9da9bc;
+                            padding: 12px 15px;
+                            margin-top: 8px;
+                            position: relative;
+                            .DateRangePicker {
+                                width: 100%;
+                            }
+                            .DateRangePickerInput {
+                                border: none;
+                                width: 100%;
+                                line-height: 1;
+                                .DateInput {
+                                    input {
+                                        font-family: "Open Sans";
+                                        color: #9da9bc;
+                                        line-height: 1;
+                                        padding: 0;
+                                        font-size: 14px;
+                                        @media screen and (max-width: 480px) {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .DateRangePickerInput_arrow {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+                        .DayPicker_transitionContainer {
+                            height: 400px !important;
+                        }
+                        .date-value {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: calc(100% - 35px);
+                            left: 10px;
+                            background-color: white;
+                            font-size: 14px;
+                            color: #9da9bc;
+                            height: 24px;
+                            line-height: 24px;
+                            z-index: 9;
+                            @media screen and (max-width: 1280px) {
+                                font-size: 12px;
+                                left: 8px;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 100%;
+                            margin-bottom: 0px;
+                            &:first-child {
+                                margin-right: 0px;
+                                margin-bottom: 0px;
+                            }
+                        }
+                        input[type="date"]:before {
+                            content: attr(placeholder) !important;
+                            color: #aaa;
+                            width: 100%;
+                        }
+                        input[type="date"]:focus:before,
+                        input[type="date"]:valid:before {
+                            content: "";
+                            font-family: "Open Sans";
+                        }
+                        .date-icon {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                            pointer-events: none;
+                            z-index: 9999;
+                            background: #fff;
+                            height: 18px;
+                        }
+                    }
+                }
+                &.message {
+                    textarea {
+                        width: 100%;
+                        font-size: 16px;
+                        color: #9da9bc;
+                        font-weight: 400;
+                        border-radius: 5px;
+                        background-color: #ffffff;
+                        border: 1px solid #9da9bc;
+                        padding: 15px;
+                        min-height: 250px;
+                    }
+                }
+                &.submit {
+                    button {
+                        font-size: 14px;
+                        letter-spacing: 3px;
+                        color: #ffffff;
+                        font-family: "Open Sans";
+                        font-weight: 600;
+                        text-align: center;
+                        width: 200px;
+                        height: 50px;
+                        border-radius: 5px;
+                        background-color: #393337;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #6dbba1;
+                        }
+                        @media screen and (max-width: 480px) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .napali_coast {
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            width: 900px;
+            text-align: center;
+            @media screen and (min-width: 768px) and (max-width: 1024px) {
+                width: 700px;
+            }
+            @media screen and (min-width: 481px) and (max-width: 767px) {
+                width: 400px;
+            }
+            @media screen and (min-width: 320px) and (max-width: 480px) {
+                width: 300px;
+            }
+            strong {
+                font-size: 60px;
+                letter-spacing: -1px;
+                color: #ffffff;
+                display: block;
+                margin-bottom: 10px;
+                font-family: 'MonotypeCorsiva';
+                font-weight: normal;
+                font-style: italic;
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 48px;
+                }
+                @media screen and (min-width: 480px) and (max-width: 767px) {
+                    font-size: 28px;
+                }
+                @media screen and (min-width: 320px) and (max-width: 480px) {
+                    font-size: 21px;
+                }
+            }
+            span {
+                font-size: 18px;
+                letter-spacing: 3px;
+                font-family: "Open Sans";
+                font-weight: bold;
+                text-align: center;
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 14px;
+                }
+                @media screen and (min-width: 480px) and (max-width: 767px) {
+                    font-size: 12px;
+                }
+                @media screen and (min-width: 320px) and (max-width: 480px) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import Aux from '../../../hoc/Aux';
-import './about-us-header.scss';
+import Aux from '../../hoc/Aux';
+import './app-header.scss';
 
-class AboutUsHeader extends Component {
+class AppHeader extends Component {
 
     constructor(props) {
         super(props);
@@ -50,9 +50,9 @@ class AboutUsHeader extends Component {
         const { loggedIn, menuActive } = this.state;
         return (
             <Aux>
-                <div className="app-about-us-header">
+                <div className="app-header">
                     <div className="logo">
-                        <img alt="no data found" src={require('../../../assets/images/logo.png')}></img>
+                        <img alt="no data found" src={require('../../assets/images/logo.png')}></img>
                     </div>
                     <div className="options" onClick={this.menuToggle.bind(this)}>
                         <div className={menuActive ? "menu-icon active" : "menu-icon"} >
@@ -88,4 +88,4 @@ class AboutUsHeader extends Component {
     };
 }
 
-export default withRouter(AboutUsHeader);
+export default withRouter(AppHeader);
