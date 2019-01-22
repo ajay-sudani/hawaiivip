@@ -141,7 +141,7 @@ class Home extends Component {
                         <VipDifferenceContainer vipDifference={vipDifference}></VipDifferenceContainer>
                     </section>
                     <section className="napali_coast">
-                        <img height={windowHeight} alt="no data found" src={require('../../assets/images/napali_coast_1.png')}></img>
+                        <img alt="no data found" src={require('../../assets/images/napali_coast_1.png')}></img>
                         <div className="info">
                             <strong>
                                 “ Hawai’i is not a State of Mind,

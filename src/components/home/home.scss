@@ -144,13 +144,10 @@
         img {
             height: 100%;
             width: 100%;
-            @media screen and (min-width: 1024px) {
-                object-fit: cover;
-                object-position: top;
-            }
-            @media screen and (max-width: 1024px) {
-                height: 500px;
-            }
+            // @media screen and (max-width: 1024px) {
+            //     object-fit: cover;
+            //     object-position: top;
+            // }
         }
     }
     .bg-cover {
@@ -158,13 +155,10 @@
         img {
             width: 100%;
             height: 100%;
-            @media screen and (min-width: 1024px) {
-                object-fit: cover;
-                object-position: top;
-            }
-            @media screen and (max-width: 1024px) {
-                height: 500px;
-            }
+            // @media screen and (min-width: 1024px) {
+            //     object-fit: cover;
+            //     object-position: top;
+            // }
         }
     }
     .private-chefs {
@@ -193,6 +187,7 @@
         position: relative;
         img {
             width: 100%;
+            height: 100%;
         }
         .info {
             position: absolute;
