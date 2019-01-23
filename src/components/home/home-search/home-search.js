@@ -17,7 +17,8 @@ class HomeSearch extends Component {
     }
 
     render() {
-
+        const smallDevice = window.matchMedia('(max-width: 1024px)').matches;
+        const orientation = smallDevice ? 'vertical' : 'horizontal';
         return (
             <Aux>
                 <div className="app-home-search">
@@ -37,6 +38,8 @@ class HomeSearch extends Component {
                         </div>
                         <div className="column date">
                             <DateRangePicker
+                                orientation={orientation}
+                                withPortal={smallDevice}
                                 startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                                 startDateId="dashboard_start_date" // PropTypes.string.isRequired,
                                 endDate={this.state.endDate} // momentPropTypes.momentObj or null,

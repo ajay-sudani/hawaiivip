@@ -108,7 +108,7 @@ class Home extends Component {
     }
 
     render() {
-        const { windowHeight, accommodation, activities, vipDifference, loggedIn } = this.state;
+        const { accommodation, activities, vipDifference, loggedIn } = this.state;
 
         return (
             <Aux>

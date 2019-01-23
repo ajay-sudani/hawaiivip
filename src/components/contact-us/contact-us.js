@@ -34,6 +34,8 @@ class ContactUs extends Component {
 
     render() {
         const { windowHeight } = this.state;
+        const smallDevice = window.matchMedia('(max-width: 767px)').matches;
+        const orientation = smallDevice ? 'vertical' : 'horizontal';
 
         return (
             <Aux>
@@ -113,6 +115,8 @@ class ContactUs extends Component {
                                     <label>CHECK IN OUT DATE</label>
                                     <div className="date">
                                         <DateRangePicker
+                                            orientation={orientation}
+                                            withPortal={smallDevice}
                                             startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                                             startDateId="check_in_date" // PropTypes.string.isRequired,
                                             endDate={this.state.endDate} // momentPropTypes.momentObj or null,
