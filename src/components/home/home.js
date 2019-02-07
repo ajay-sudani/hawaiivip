@@ -13,12 +13,9 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = { windowWidth: 0, windowHeight: 0, accommodation: [], activities: [], vipDifference: [], loggedIn: false };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
     componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
         this.setAccommodation();
         this.setActivities();
         this.setVIPDifference();
@@ -94,11 +91,6 @@ class Home extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
-
-    updateWindowDimensions() {
-        this.setState({ windowWidth: window.innerWidth, windowHeight: window.innerHeight });
     }
 
     onLoginEvent(data) {

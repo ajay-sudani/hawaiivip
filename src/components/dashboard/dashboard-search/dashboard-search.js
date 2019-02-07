@@ -66,7 +66,6 @@ class DashboardSearch extends Component {
     render() {
 
         const { toggleGuest, guestNumber, toggleSwitch } = this.state;
-        const smallDevice = window.matchMedia('(max-width: 1024px)').matches;
 
         return (
             <Aux>
