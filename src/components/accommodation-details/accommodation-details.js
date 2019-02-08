@@ -262,7 +262,7 @@ class AccommodationDetails extends Component {
                                         numberOfMonths={1}
                                         isOutsideRange={() => false}
                                         displayFormat="DD/MM/YYYY"
-                                        placeholder="End date"
+                                        placeholder="Check in Date"
                                         id="start_date"
                                     />
                                     <div className="date-icon">
