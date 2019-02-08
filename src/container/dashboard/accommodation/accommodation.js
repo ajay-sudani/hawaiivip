@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './accommodation.scss';
-import AccommodationCardContainer from './accommodation-card/accommodation-card'
+import AccommodationCardContainer from './accommodation-card/accommodation-card';
 
 const AccommodationContainer = ({ accommodation }) => (
     <div className="dashboard-accommodation">
