@@ -42,8 +42,8 @@ class AppHeader extends Component {
         }, () => this.props.onLoginEvent(false));
     }
 
-    goToDashboard() {
-        this.props.history.push('dashboard');
+    goToRoute(prm) {
+        this.props.history.push(prm);
     }
 
     render() {
@@ -51,7 +51,7 @@ class AppHeader extends Component {
         return (
             <Aux>
                 <div className="app-header">
-                    <div className="logo">
+                    <div className="logo" onClick={this.goToRoute.bind(this, 'home')}>
                         <img alt="no data found" src={require('../../assets/images/logo.png')}></img>
                     </div>
                     <div className="options" onClick={this.menuToggle.bind(this)}>
@@ -61,11 +61,11 @@ class AppHeader extends Component {
                             <p className="third"></p>
                         </div>
                         <ul className={menuActive ? 'active' : null}>
-                            <li onClick={this.goToDashboard.bind(this)}><span>ACCOMMODATIONS</span></li>
+                            <li onClick={this.goToRoute.bind(this, 'dashboard')}><span>ACCOMMODATIONS</span></li>
                             <li><span>ACTIVITIES</span></li>
                             {!loggedIn ? (<Aux>
-                                <li className="about"><span>ABOUT</span></li>
-                                <li><span>CONTACT</span></li>
+                                <li className="about" onClick={this.goToRoute.bind(this, 'about-us')}><span>ABOUT</span></li>
+                                <li onClick={this.goToRoute.bind(this, 'contact-us')}><span>CONTACT</span></li>
                                 <li onClick={this.login.bind(this)}><button>LOGIN</button></li>
                             </Aux>)
                                 : (<Aux>

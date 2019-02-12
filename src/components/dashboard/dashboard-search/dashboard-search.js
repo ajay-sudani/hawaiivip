@@ -75,9 +75,12 @@ class DashboardSearch extends Component {
                             <div className="left">
                                 <div className="column areas">
                                     <select>
-                                        <option value="1">Area 1</option>
-                                        <option value="2">Area 2</option>
-                                        <option value="3">Area 3</option>
+                                        <option value="1">Hawaii (Big Island)</option>
+                                        <option value="2">Maui</option>
+                                        <option value="3">Lanai</option>
+                                        <option value="4">Oahu</option>
+                                        <option value="5">Kauai</option>
+                                        <option value="6">Molokai</option>
                                     </select>
                                     <div className="down-arrow">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 9" width="17" height="9">
@@ -116,7 +119,7 @@ class DashboardSearch extends Component {
                                         onFocusChange={this.onEndDateFocusChange}
                                         numberOfMonths={1}
                                         isOutsideRange={() => false}
-                                        displayFormat="DD/MM/YYYY"
+                                        displayFormat="MM/DD/YYYY"
                                         placeholder="End date"
                                         id="end_date"
                                     />

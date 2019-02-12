@@ -149,7 +149,7 @@ class ContactUs extends Component {
                                         onFocusChange={this.onEndDateFocusChange}
                                         numberOfMonths={1}
                                         isOutsideRange={() => false}
-                                        displayFormat="DD/MM/YYYY"
+                                        displayFormat="MM/DD/YYYY"
                                         placeholder="End date"
                                         id="end_date"
                                     />

@@ -107,6 +107,7 @@
         max-width: calc(100% - 200px);
         margin: 0 auto;
         padding: 100px 80px;
+        position: relative;
         @media screen and (max-width: 1600px) {
             padding: 80px 120px;
             max-width: 100%;
@@ -139,6 +140,11 @@
                 margin-bottom: 80px;
                 &.last-row {
                     margin-bottom: 0px;
+                }
+                &.base-info {
+                    @media screen and (max-width: 900px) {
+                        margin-bottom: 550px;
+                    }
                 }
                 @media screen and (max-width: 767px) {
                     margin-bottom: 0px;
@@ -260,7 +266,33 @@
                 width: calc(35% - 60px);
             }
             @media screen and (max-width: 900px) {
-                width: 100%;
+                position: absolute;
+                left: 50%;
+                width: calc(100% - 120px);
+                transform: translateX(-50%);
+                top: 350px;
+            }
+            @media screen and (max-width: 767px) {
+                top: 370px;
+            }
+            @media screen and (max-width: 690px) {
+                top: 400px;
+            }
+            @media screen and (max-width: 600px) {
+                top: 450px;
+            }
+            @media screen and (max-width: 480px) {
+                top: 320px;
+                width: calc(100% - 80px);
+            }
+            @media screen and (max-width: 450px) {
+                top: 370px;
+            }
+            @media screen and (max-width: 360px) {
+                top: 400px;
+            }
+            @media screen and (max-width: 340px) {
+                top: 430px;
             }
             .row {
                 padding: 20px;
@@ -280,8 +312,15 @@
                         }
                         &.ind {
                             position: relative;
-                            top: -10px;
+                            top: 0px;
                             left: 5px;
+                            font-size: 22px;
+                            @media screen and (max-width: 1600px) {
+                                font-size: 18px;
+                            }
+                            @media screen and (max-width: 1400px) {
+                                font-size: 16px;
+                            }
                         }
                     }
                     span {
@@ -344,7 +383,7 @@
                                 }
                             }
                             .DateInput_input {
-                                font-size: 16px;
+                                font-size: 14px;
                                 color: #9da9bc;
                                 font-family: "Open Sans";
                                 font-weight: 400;
@@ -370,7 +409,7 @@
                                 width: 100%;
                                 border: none;
                                 background-color: transparent;
-                                font-size: 16px;
+                                font-size: 14px;
                                 color: #9da9bc;
                                 height: 100%;
                             }

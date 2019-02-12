@@ -117,7 +117,7 @@ class AccommodationDetails extends Component {
                     </section>
                     <section className="am-details">
                         <div className="left">
-                            <div className="row">
+                            <div className="row base-info">
                                 <div className="info">
                                     <label>Coral Gardens Estate At Makena Bay</label>
                                     <p className="first">Set directly overlooking Maui's Makena Bay, Makena Landing, and Maluaka Beach, Coral Gardens Estate is the ideal location to enjoy exceptional ocean views
@@ -261,9 +261,9 @@ class AccommodationDetails extends Component {
                                         onFocusChange={this.onStartDateFocusChange}
                                         numberOfMonths={1}
                                         isOutsideRange={() => false}
-                                        displayFormat="DD/MM/YYYY"
                                         placeholder="Check in Date"
                                         id="start_date"
+                                        displayFormat="MM/DD/YYYY"
                                     />
                                     <div className="date-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18">

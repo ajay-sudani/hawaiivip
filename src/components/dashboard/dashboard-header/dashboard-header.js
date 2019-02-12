@@ -38,8 +38,8 @@ class DashboardHeader extends Component {
         }, () => this.props.onLoginEvent(false));
     }
 
-    goToDashboard() {
-        this.props.history.push('home');
+    goToRoute(prm) {
+        this.props.history.push(prm);
     }
 
     render() {
@@ -50,7 +50,7 @@ class DashboardHeader extends Component {
             <Aux>
                 <div className="dashboard-header">
                     <div className="container">
-                        <div className="logo" onClick={this.goToDashboard.bind(this)}>
+                        <div className="logo" onClick={this.goToRoute.bind(this, 'home')}>
                             <img alt="no data found" src={require('../../../assets/images/logo_white.png')}></img>
                         </div>
                         <div className="options">
@@ -78,8 +78,8 @@ class DashboardHeader extends Component {
                                     ) :
                                         (
                                             <Aux>
-                                                <li>ABOUT</li>
-                                                <li>CONTACT</li>
+                                                <li onClick={this.goToRoute.bind(this, 'about-us')}>ABOUT</li>
+                                                <li onClick={this.goToRoute.bind(this, 'contact-us')}>CONTACT</li>
                                                 <li className="login-content">
                                                     <button onClick={this.login.bind(this)}>LOGIN</button>
                                                 </li>
